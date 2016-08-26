@@ -14,7 +14,9 @@
     "test": "node node_modules/mocha/bin/mocha tests",
     "test:watch": "node node_modules/mocha/bin/mocha --watch tests",
     "dev": "webpack-dev-server --config example/webpack.config.js --devtool eval --progress --colors --hot --content-base example",
-    "lint": "./node_modules/.bin/eslint src/ DateTime.js"
+    "lint": "./node_modules/.bin/eslint src/ DateTime.js",
+    "storybook": "start-storybook -p 9001 -s ./css",
+    "build-storybook": "build-storybook -o /tmp/storybook -s ./css"
   },
   "keywords": [
     "react",
@@ -48,6 +50,7 @@
     "webpack-dev-server": "^1.7.0"
   },
   "dependencies": {
+    "@kadira/storybook": "^1.28.1",
     "object-assign": "^3.0.0",
     "prop-types": "^0.2.0",
     "react-onclickoutside": "^4.1.0"
